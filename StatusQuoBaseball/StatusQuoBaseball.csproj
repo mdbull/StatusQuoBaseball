@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{7275ECFB-6CCC-4F97-A94D-C9AEAC2B55F6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StatusQuoBaseball</RootNamespace>
+    <AssemblyName>StatusQuoBaseball</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Bullock">
+      <HintPath>dll\Bullock.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="Mono.CSharp" />
+    <Reference Include="TypeSupport">
+      <HintPath>..\packages\TypeSupport.1.0.108\lib\net47\TypeSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Base\FieldLocation.cs" />
+    <Compile Include="Base\SeasonStatisticsContainer.cs" />
+    <Compile Include="Base\CoachingStats.cs" />
+    <Compile Include="Base\Race.cs" />
+    <Compile Include="Base\EntityList.cs" />
+    <Compile Include="Base\Weight.cs" />
+    <Compile Include="Base\TeamSeasonStatisticsContainer.cs" />
+    <Compile Include="Base\VenueManager.cs" />
+    <Compile Include="Base\UniformsLoader.cs" />
+    <Compile Include="Base\GameStatisticsDisplayer.cs" />
+    <Compile Include="Base\GameStats.cs" />
+    <Compile Include="Base\SeasonStatisticsDisplayer.cs" />
+    <Compile Include="Base\PitchingStatisticsContainer.cs" />
+    <Compile Include="Base\PitchingStats.cs" />
+    <Compile Include="Base\Uniform.cs" />
+    <Compile Include="Base\Venue.cs" />
+    <Compile Include="Base\Standings.cs" />
+    <Compile Include="Base\Positions.cs" />
+    <Compile Include="Base\Birthday.cs" />
+    <Compile Include="Base\Player.cs" />
+    <Compile Include="Base\PitchResults.cs" />
+    <Compile Include="Base\SeasonStatisticalLeaders.cs" />
+    <Compile Include="Base\BattingStats.cs" />
+    <Compile Include="Base\OffensiveStats.cs" />
+    <Compile Include="Base\Person.cs" />
+    <Compile Include="Base\NullPlayer.cs" />
+    <Compile Include="Base\Entity.cs" />
+    <Compile Include="Base\Team.cs" />
+    <Compile Include="Base\Roster.cs" />
+    <Compile Include="Base\TeamGroup.cs" />
+    <Compile Include="Base\StatisticsContainer.cs" />
+    <Compile Include="Base\BattingStatisticsContainer.cs" />
+    <Compile Include="Base\Deathday.cs" />
+    <Compile Include="Base\FieldingStatisticsContainer.cs" />
+    <Compile Include="Base\BattingResults.cs" />
+    <Compile Include="Base\Rankings.cs" />
+    <Compile Include="Base\TeamGroupTree.cs" />
+    <Compile Include="Base\Handedness.cs" />
+    <Compile Include="Base\FieldingStats.cs" />
+    <Compile Include="Base\Measurement.cs" />
+    <Compile Include="Base\TeamInfoDisplayer.cs" />
+    <Compile Include="Base\Height.cs" />
+    <Compile Include="Base\Coach.cs" />
+    <Compile Include="Base\RankingSorters\SortPitchingByERADescending.cs" />
+    <Compile Include="Base\RankingSorters\SortBattingAverageDescending.cs" />
+    <Compile Include="Base\RankingSorters\SortBattingByHomeruns.cs" />
+    <Compile Include="Base\RankingSorters\SortPitchingByERAAscending.cs" />
+    <Compile Include="Base\RankingSorters\SortBattingByRBI.cs" />
+    <Compile Include="Base\RankingSorters\SortPitchingByWins.cs" />
+    <Compile Include="Base\RankingSorters\SortPitchingByStrikeouts.cs" />
+    <Compile Include="Base\RankingSorters\SortBattingByHits.cs" />
+    <Compile Include="Base\RankingSorters\SortBattingByStolenBases.cs" />
+    <Compile Include="Base\RankingSorters\SortBattingAverageAscending.cs" />
+    <Compile Include="Database\SQLNonQueryResult.cs" />
+    <Compile Include="Database\SQLQueryResult.cs" />
+    <Compile Include="Database\Db.cs" />
+    <Compile Include="Database\SQLDataRow.cs" />
+    <Compile Include="Database\SQLStoredProcedure.cs" />
+    <Compile Include="Database\StoredProcedureManager.cs" />
+    <Compile Include="Database\SQLDataSet.cs" />
+    <Compile Include="Database\SQLDataTable.cs" />
+    <Compile Include="Database\SQLStatementResult.cs" />
+    <Compile Include="Configuration\InMemoryConfigurationFile.cs" />
+    <Compile Include="Configuration\ConfigurationManager.cs" />
+    <Compile Include="Utilities\Fraction.cs" />
+    <Compile Include="Utilities\ExtendedConsole.cs" />
+    <Compile Include="Utilities\SerializationMethods.cs" />
+    <Compile Include="Utilities\Dumper.cs" />
+    <Compile Include="Utilities\ExtensionClassMethods.cs" />
+    <Compile Include="Utilities\OrdinalNumberGenerator.cs" />
+    <Compile Include="Utilities\ExtendedPropertyMethods.cs" />
+    <Compile Include="Utilities\TextUtilities.cs" />
+    <Compile Include="Utilities\Dice.cs" />
+    <Compile Include="Utilities\MarkdownFromXMLGenerator.cs" />
+    <Compile Include="Utilities\InMemoryCSVFile.cs" />
+    <Compile Include="Utilities\Logger.cs" />
+    <Compile Include="Utilities\SABRMetricsManager.cs" />
+    <Compile Include="Utilities\ArrayUtilities.cs" />
+    <Compile Include="Utilities\Constants.cs" />
+    <Compile Include="Loaders\TeamLoader.cs" />
+    <Compile Include="Loaders\ObjectLoader.cs" />
+    <Compile Include="Loaders\ILoadable.cs" />
+    <Compile Include="Loaders\FileLoaders\FileObjectLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabaseCoachingAwardsLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabasePersonLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabasePitchingStatsLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabaseGroupLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabaseWorldSeriesLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabaseFieldingStatsLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabaseRosterLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabaseLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabaseCoachLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabaseBattingStatsLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\PersonBasicInformation.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabaseChampionshipSeriesLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabasePlayerStatisticsLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabaseTeamLoader.cs" />
+    <Compile Include="Loaders\DatabaseLoaders\DatabaseGameStatsLoader.cs" />
+    <Compile Include="Gameplay\Bases.cs" />
+    <Compile Include="Gameplay\IProgressReporter.cs" />
+    <Compile Include="Gameplay\Error.cs" />
+    <Compile Include="Gameplay\GroundOut.cs" />
+    <Compile Include="Gameplay\ProgressReporterEventArgs.cs" />
+    <Compile Include="Gameplay\Scoreboard.cs" />
+    <Compile Include="Gameplay\OtherResult.cs" />
+    <Compile Include="Gameplay\PopFlyOut.cs" />
+    <Compile Include="Gameplay\AtBat.cs" />
+    <Compile Include="Gameplay\Hit.cs" />
+    <Compile Include="Gameplay\Series.cs" />
+    <Compile Include="Gameplay\Single.cs" />
+    <Compile Include="Gameplay\IExecutable.cs" />
+    <Compile Include="Gameplay\Inning.cs" />
+    <Compile Include="Gameplay\Balk.cs" />
+    <Compile Include="Gameplay\RoundRobin.cs" />
+    <Compile Include="Gameplay\Announcer.cs" />
+    <Compile Include="Gameplay\Strikeout.cs" />
+    <Compile Include="Gameplay\HitByPitch.cs" />
+    <Compile Include="Gameplay\Walk.cs" />
+    <Compile Include="Gameplay\SacrificeFly.cs" />
+    <Compile Include="Gameplay\Double.cs" />
+    <Compile Include="Gameplay\HomeRun.cs" />
+    <Compile Include="Gameplay\StrikeoutType.cs" />
+    <Compile Include="Gameplay\Triple.cs" />
+    <Compile Include="Gameplay\GameplayResult.cs" />
+    <Compile Include="Gameplay\DeepFlyOut.cs" />
+    <Compile Include="Gameplay\StealAttempt.cs" />
+    <Compile Include="Gameplay\Game.cs" />
+    <Compile Include="Gameplay\Flyout.cs" />
+    <Compile Include="Gameplay\Out.cs" />
+    <Compile Include="Tests\NDiceRoll.cs" />
+    <Compile Include="Tests\NSerializationMethods.cs" />
+    <Compile Include="Tests\NInMemoryCSVFile.cs" />
+    <Compile Include="Tests\NArrayUtilities.cs" />
+    <Compile Include="Tests\NFieldingStats.cs" />
+    <Compile Include="Tests\NBirthday.cs" />
+    <Compile Include="Tests\NChampionshipSeries.cs" />
+    <Compile Include="Tests\NTextUtilities.cs" />
+    <Compile Include="Tests\NOrdinalNumberGenerator.cs" />
+    <Compile Include="Tests\NHeight.cs" />
+    <Compile Include="Tests\NVenue.cs" />
+    <Compile Include="Tests\NLogger.cs" />
+    <Compile Include="Tests\NBattingStats.cs" />
+    <Compile Include="Tests\NInning.cs" />
+    <Compile Include="Tests\NTestFlyouts.cs" />
+    <Compile Include="Tests\NInMemoryConfigurationFile.cs" />
+    <Compile Include="Tests\NTestGroundouts.cs" />
+    <Compile Include="Tests\NCoach.cs" />
+    <Compile Include="Tests\NTeam.cs" />
+    <Compile Include="Tests\NDatabase.cs" />
+    <Compile Include="Tests\NPlayer.cs" />
+    <Compile Include="Tests\NRankings.cs" />
+    <Compile Include="Tests\NCheckInningsPitched.cs" />
+    <Compile Include="Tests\NFieldingStatistics.cs" />
+    <Compile Include="Tests\NWeight.cs" />
+    <Compile Include="Tests\NLoaders.cs" />
+    <Compile Include="Tests\NStrikeoutType.cs" />
+    <Compile Include="Tests\NPitchingStats.cs" />
+    <Compile Include="Tests\NMarkdownFromXml.cs" />
+    <Compile Include="Tests\NFraction.cs" />
+    <Compile Include="Tests\NUniform.cs" />
+    <Compile Include="Tests\NNullPlayer.cs" />
+    <Compile Include="Tests\NConfigurationManager.cs" />
+    <Compile Include="Tests\NRoundRobin.cs" />
+    <Compile Include="Tests\NSABRMetricsManager.cs" />
+    <Compile Include="Menu\PlaySeries.cs" />
+    <Compile Include="Menu\ViewTeamInformation.cs" />
+    <Compile Include="Menu\PlayWorldSeries.cs" />
+    <Compile Include="Menu\ViewLeagueInformation.cs" />
+    <Compile Include="Menu\PlayChampionshipSeries.cs" />
+    <Compile Include="Menu\ProgramExit.cs" />
+    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="Menu\PlayRoundRobin.cs" />
+    <Compile Include="Base\RankingSorters\SortPitchingBySaves.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

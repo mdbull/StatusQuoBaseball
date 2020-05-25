@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{7275ECFB-6CCC-4F97-A94D-C9AEAC2B55F6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StatusQuoBaseball/Gameplay/Game.cs">
+    <Files>
+      <File FileName="StatusQuoBaseball/Gameplay/Game.cs" Line="105" Column="55" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StatusQuoBaseball" expanded="True">
+            <Node name="StatusQuoBaseball" expanded="True">
+              <Node name="Base" expanded="True" />
+              <Node name="Gameplay" expanded="True">
+                <Node name="Game.cs" selected="True" />
+              </Node>
+              <Node name="Loaders" expanded="True">
+                <Node name="DatabaseLoaders" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.StatusQuoBaseball PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
